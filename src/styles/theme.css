@@ -1,0 +1,23 @@
+:root {
+  --bg: 248 248 249;
+  --panel: 255 255 255;
+  --text: 18 18 18;
+  --muted: 120 120 120;
+  --border: 230 230 230;
+
+  --accent: 17 17 17;
+  --accent-contrast: 255 255 255;
+  --danger: 220 38 38;
+  --success: 22 163 74;
+}
+
+.dark {
+  --bg: 10 10 10;
+  --panel: 20 20 20;
+  --text: 240 240 240;
+  --muted: 160 160 160;
+  --border: 40 40 40;
+
+  --accent: 255 255 255;
+  --accent-contrast: 10 10 10;
+}

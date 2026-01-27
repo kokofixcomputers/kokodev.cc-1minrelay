@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-[rgb(var(--bg))] text-[rgb(var(--text))] antialiased;
+    font-feature-settings: "ss01";
+  }
+
+  h1 {
+    @apply text-4xl md:text-6xl font-semibold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .page-frame {
+    @apply min-h-screen overflow-x-hidden;
+  }
+
+  .section {
+    @apply py-28 px-6;
+  }
+
+  .container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .glass {
+    @apply bg-[rgb(var(--panel)/0.75)]
+           backdrop-blur-[12px]
+           border border-[rgb(var(--border))]
+           shadow-[0_10px_30px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.3)];
+  }
+
+  .card {
+    @apply bg-[rgb(var(--panel)/0.75)]
+           backdrop-blur-[12px]
+           border border-[rgb(var(--border))]
+           shadow-[0_10px_30px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.3)]
+           rounded-xl p-8
+           transition-all duration-300
+           hover:shadow-[0_20px_40px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.4)]
+           hover:scale-[1.02];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center
+           rounded-full px-6 py-3
+           text-sm font-medium
+           transition;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center
+           rounded-full px-6 py-3
+           text-sm font-medium
+           transition-all duration-200
+           bg-[rgb(var(--accent))]
+           text-[rgb(var(--accent-contrast))]
+           hover:opacity-90 hover:scale-105
+           cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center
+           rounded-full px-6 py-3
+           text-sm font-medium
+           transition-all duration-200
+           border border-[rgb(var(--border))]
+           hover:bg-black/5 dark:hover:bg-white/10 hover:scale-105
+           cursor-pointer;
+  }
+
+  .badge-primary {
+    @apply inline-flex items-center rounded-full
+           px-3 py-1 text-xs font-medium
+           bg-[rgb(var(--accent))]
+           text-[rgb(var(--accent-contrast))];
+  }
+
+  .badge-secondary {
+    @apply inline-flex items-center rounded-full
+           px-3 py-1 text-xs font-medium
+           bg-black/5 dark:bg-white/10
+           text-[rgb(var(--text))];
+  }
+
+  .badge-success {
+    @apply inline-flex items-center rounded-full
+           px-3 py-1 text-xs font-medium
+           bg-[rgb(var(--success)/0.1)]
+           text-[rgb(var(--success))]
+           border border-[rgb(var(--success)/0.2)];
+  }
+
+  .badge-warning {
+    @apply inline-flex items-center rounded-full
+           px-3 py-1 text-xs font-medium
+           bg-[rgb(var(--warning)/0.1)]
+           text-[rgb(var(--warning))]
+           border border-[rgb(var(--warning)/0.2)];
+  }
+
+  .badge-danger {
+    @apply inline-flex items-center rounded-full
+           px-3 py-1 text-xs font-medium
+           bg-[rgb(var(--danger)/0.1)]
+           text-[rgb(var(--danger))]
+           border border-[rgb(var(--danger)/0.2)];
+  }
+
+  .alert {
+    @apply rounded-xl p-4 border;
+  }
+
+  .alert-success {
+    @apply rounded-xl p-4 border
+           border-[rgb(var(--success))]
+           text-[rgb(var(--success))];
+  }
+
+  .alert-danger {
+    @apply rounded-xl p-4 border
+           border-[rgb(var(--danger))]
+           text-[rgb(var(--danger))];
+  }
+
+  .alert-warning {
+    @apply rounded-xl p-4 border
+           border-[rgb(var(--warning))]
+           text-[rgb(var(--warning))];
+  }
+
+  .table {
+    @apply w-full rounded-xl overflow-hidden
+           bg-[rgb(var(--panel)/0.75)]
+           backdrop-blur-[12px]
+           border border-[rgb(var(--border))];
+  }
+
+  .table th {
+    @apply px-6 py-4 text-left font-semibold
+           bg-black/5 dark:bg-white/5
+           border-b border-[rgb(var(--border))];
+  }
+
+  .table td {
+    @apply px-6 py-4
+           border-b border-[rgb(var(--border))]
+           last:border-b-0;
+  }
+
+  .navbar-float {
+    @apply fixed top-0 left-0 right-0 z-50
+           bg-[rgb(var(--panel)/0.8)]
+           backdrop-blur-[16px]
+           border-b border-[rgb(var(--border))]
+           shadow-[0_8px_32px_rgba(0,0,0,0.1)]
+           transition-all duration-300;
+  }
+
+  .input {
+    @apply w-full rounded-lg px-4 py-3
+           bg-transparent
+           border border-[rgb(var(--border))]
+           focus:outline-none focus:ring-2 focus:ring-black/10;
+  }
+}
