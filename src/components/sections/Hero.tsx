@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { fadeUp } from "../../styles/motion"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Book, Github, SquareChartGantt } from "lucide-react"
 
 export default function Hero() {
   return (
@@ -47,7 +47,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              GitHub →
+              <Github className="w-5 h-4" /> GitHub →
             </a>
             <a 
               href="#pricing" 
@@ -57,7 +57,13 @@ export default function Hero() {
                 document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })
               }}
             >
-              View Plans
+              <SquareChartGantt className="w-5 h-4" /> View Plans
+            </a>
+            <a 
+              href="https://relaydocs.kokodev.cc" 
+              className="btn-secondary"
+            >
+              <Book className="w-5 h-4" /> Documentation
             </a>
           </div>
 
